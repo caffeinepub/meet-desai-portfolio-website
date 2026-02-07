@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        /* Light mode - keeping defaults but won't be used much */
+        --background: 0.98 0 0;
+        --foreground: 0.145 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.145 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.145 0 0;
+        --primary: 0.205 0 0;
+        --primary-foreground: 0.985 0 0;
+        --secondary: 0.97 0 0;
+        --secondary-foreground: 0.205 0 0;
+        --muted: 0.97 0 0;
+        --muted-foreground: 0.556 0 0;
+        --accent: 0.97 0 0;
+        --accent-foreground: 0.205 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.922 0 0;
+        --input: 0.922 0 0;
+        --ring: 0.708 0 0;
+    }
+
+    .dark {
+        /* Dark navy/black background with cyan/purple accents */
+        --background: 0.12 0.02 250;
+        --foreground: 0.95 0.01 250;
+        --card: 0.18 0.03 250;
+        --card-foreground: 0.95 0.01 250;
+        --popover: 0.15 0.03 250;
+        --popover-foreground: 0.95 0.01 250;
+        --primary: 0.75 0.15 195;
+        --primary-foreground: 0.12 0.02 250;
+        --secondary: 0.25 0.04 250;
+        --secondary-foreground: 0.95 0.01 250;
+        --muted: 0.25 0.03 250;
+        --muted-foreground: 0.65 0.02 250;
+        --accent: 0.35 0.05 250;
+        --accent-foreground: 0.95 0.01 250;
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0.01 250;
+        --border: 0.30 0.04 250;
+        --input: 0.25 0.04 250;
+        --ring: 0.70 0.12 195;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', 'Orbitron', system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@layer utilities {
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .transform-style-3d {
+        transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
+
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+
+    .animate-in {
+        animation-fill-mode: both;
+    }
+
+    .fade-in {
+        animation-name: fadeIn;
+    }
+
+    .slide-in-from-bottom-4 {
+        animation-name: slideInFromBottom;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInFromBottom {
+        from {
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .duration-700 {
+        animation-duration: 700ms;
+    }
+
+    .delay-150 {
+        animation-delay: 150ms;
+    }
+
+    .delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .delay-500 {
+        animation-delay: 500ms;
+    }
+
+    .delay-700 {
+        animation-delay: 700ms;
+    }
+}

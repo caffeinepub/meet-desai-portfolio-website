@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Add college name to portfolio content",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add the college name \"SAL Institute of Technology and Engineering Research\" to the portfolio’s visible text so visitors can clearly see where the user studies. Include it in (1) the Hero section subtitle line under the name and (2) the first paragraph of the About Me section (keeping existing styling and animations intact).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-user-1"
+        ],
+        "quotes": [
+          "add my college name : sal instiute of technology and engineering researc"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section (frontend/src/components/portfolio/HeroSection.tsx) displays the college name in the subtitle area under \"Meet Desai\" on desktop and mobile layouts.",
+        "About Me section (frontend/src/components/portfolio/AboutSection.tsx) first paragraph includes the college name and renders correctly with the existing scroll-reveal animation.",
+        "No other sections’ content or links are changed."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for any user-facing text.",
+    "Do not edit any files under frontend/src/components/ui or other frontend immutablePaths.",
+    "Keep the app as a single-page responsive portfolio; no new backend functionality is introduced."
+  ],
+  "nonGoals": [
+    "Adding a new Education section or timeline.",
+    "Storing college name in the backend or adding admin editing UI.",
+    "Changing the visual theme beyond the minimal text additions."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

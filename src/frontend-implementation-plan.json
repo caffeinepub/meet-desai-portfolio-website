@@ -1,0 +1,28 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add college name to Hero and About sections",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Insert the college name into the existing Hero subtitle line and the first About paragraph while preserving current styling and animations.",
+      "acceptanceCriteria": [
+        "Hero section (frontend/src/components/portfolio/HeroSection.tsx) displays the college name in the subtitle area under \"Meet Desai\" on desktop and mobile layouts.",
+        "About Me section (frontend/src/components/portfolio/AboutSection.tsx) first paragraph includes the college name and renders correctly with the existing scroll-reveal animation.",
+        "No other sections’ content or links are changed."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Update the hero subtitle line under \"Meet Desai\" to include the college name \"SAL Institute of Technology and Engineering Research\" while keeping the existing Tailwind classes and animate-in behavior unchanged."
+        },
+        {
+          "path": "frontend/src/components/portfolio/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Update the first paragraph text to include \"SAL Institute of Technology and Engineering Research\" without changing the existing markup structure, styling spans, or the current scroll-reveal (useInViewOnce) animation behavior."
+        }
+      ]
+    }
+  ]
+}

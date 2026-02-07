@@ -1,0 +1,40 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T08:05:50.605Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Add the college name \"SAL Institute of Technology and Engineering Research\" to the portfolio’s visible text so visitors can clearly see where the user studies. Include it in (1) the Hero section subtitle line under the name and (2) the first paragraph of the About Me section (keeping existing styling and animations intact).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/portfolio/HeroSection.tsx",
+          "frontend/src/components/portfolio/AboutSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/portfolio/HeroSection.tsx",
+          "frontend/src/components/portfolio/AboutSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/portfolio/AboutSection.tsx",
+    "frontend/src/components/portfolio/HeroSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

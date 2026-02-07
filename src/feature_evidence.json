@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-the-college-name-sal-institute-of-technology-and-engineering-research-to-the-portfolio-s-visible-text-so-visitors-can-clearly-see-where-the-user-studies-include-it-in-1-the-hero-section-subtitle-line-under-the-name-and-2-the-first-paragraph-of-the-about-me-section-keeping-existing-styling-and-animations-intact",
+      "featureTitle": "Add the college name \"SAL Institute of Technology and Engineering Research\" to the portfolio’s visible text so visitors can clearly see where the user studies. Include it in (1) the Hero section subtitle line under the name and (2) the first paragraph of the About Me section (keeping existing styling and animations intact).",
+      "files": [
+        "frontend/src/components/portfolio/AboutSection.tsx",
+        "frontend/src/components/portfolio/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
